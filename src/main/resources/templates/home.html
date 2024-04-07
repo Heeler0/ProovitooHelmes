@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proovitoo</title>
+
+    <script type="text/javascript" th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/proovitoo.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/proovitoo.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/common.css}"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<div th:replace="~{/common/header :: header}">...</div>
+
+<div class="content">
+    <form id="sectorsForm" action="#">
+        <div>
+            <label for="sectorsOptions">Sectors: </label>
+            <select id="sectorsOptions" name="sectorsOptions[]" multiple required class="form-control">
+
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="acceptTerms" required>
+            <label for="acceptTerms">Accept terms</label>
+        </div>
+        <button id="formSubmit" type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

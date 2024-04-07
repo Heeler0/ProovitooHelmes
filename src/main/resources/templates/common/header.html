@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body onload="getUser()">
+
+<div th:fragment="header" th:remove="tag">
+    <header class="header">
+        <div class="headerTitle">
+            <h2 class="Title">Sector application</h2>
+        </div>
+        <div class="userContainerClass">
+            <h3 class="userName">Hello: <span id="userNameText"></span></h3>
+            <a class="btn btn-xs btn-danger" th:href="@{/logout}">Logout</a>
+        </div>
+    </header>
+</div>
+
+</body>
+</html>
